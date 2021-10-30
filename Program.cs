@@ -6,7 +6,13 @@ namespace UsePackages
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var number = 234;
+
+            // var result = FizzBuzz.GetResult(number);
+
+            // Console.WriteLine("FizzBuzz Result is: " + result);
+
+            // Not working
         }
     }
 }
