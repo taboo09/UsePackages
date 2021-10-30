@@ -23,7 +23,7 @@ jobs:
         source-url: ${{ env.NUGET_URL }}
         
     - name: Display all nuget sources
-      run: echo '::info::'dotnet nuget list source
+      run: dotnet nuget list source
     - name: Install dependencies
       run: dotnet restore
     - name: Build
