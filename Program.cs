@@ -1,4 +1,5 @@
 ﻿using System;
+using FizzBuzzPackage;
 
 namespace UsePackages
 {
@@ -8,11 +9,9 @@ namespace UsePackages
         {
             var number = 234;
 
-            // var result = FizzBuzz.GetResult(number);
+            var result = FizzBuzz.GetResult(number);
 
-            // Console.WriteLine("FizzBuzz Result is: " + result);
-
-            // Not working
+            Console.WriteLine("FizzBuzz Result is: " + result);
         }
     }
 }
