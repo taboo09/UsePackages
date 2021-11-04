@@ -32,3 +32,22 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Run the application
       run: dotnet run
+
+  publish:
+  
+    runs-on: ubuntu-latest
+    environment: 'prod'
+    needs: [build]
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        source-url: ${{ env.NUGET_URL }}
+
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Publish the app
+      run: dotnet publish -o ./output
